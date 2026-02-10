@@ -1,0 +1,37 @@
+# Python-specific ignores
+# Byte-code files
+__pycache__/
+*.pyc
+*.pyd
+*.bin
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+
+# specific to pipenv
+Pipfile.lock 
+
+# Environments
+.env
+.flaskenv
+
+# VS Code-specific ignores
+.vscode/
+debug*.log
+debugpy*.log
+.classpath
+.project
+.settings
+
+# Misc
+*.log
