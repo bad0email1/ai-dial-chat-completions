@@ -14,8 +14,12 @@ async def start(stream: bool, custom: bool, debug: bool) -> None:
     # (you can get available deployment_name via https://ai-proxy.lab.epam.com/openai/models
     #  you can import Postman collection to make a request, file in the project root `dial-basics.postman_collection.json`
     #  don't forget to add your API_KEY)
-    # "gpt-4", "gpt-4o", "gpt-5-nano-2025-08-07", "gpt-5-mini-2025-08-07", "gpt-4.1-mini-2025-04-14", "gpt-4.1-nano-2025-04-14"
-    model = "gpt-4o"
+    # "gpt-4", "gpt-4o", "gpt-4.1-mini-2025-04-14", "gpt-4.1-nano-2025-04-14"
+    # "gpt-5-nano-2025-08-07", "gpt-5-mini-2025-08-07"
+    # "claude-sonnet-4@20250514", "claude-sonnet-4-5@20250929"
+    # "gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro"
+    # "gemini-3-flash-preview"
+    model = "gemini-2.5-flash-lite"
     if not custom:
         dial_client = DialClient(deployment_name=model, debug=debug)
     # 1.2. Create CustomDialClient
@@ -50,4 +54,4 @@ async def start(stream: bool, custom: bool, debug: bool) -> None:
     # 10. In CustomDialClient add print of whole request and response to see what you send and what you get in response
 
 
-asyncio.run(start(True, True, False))
+asyncio.run(start(True, False, True))
