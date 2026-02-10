@@ -76,6 +76,8 @@ class CustomDialClient:
             #    - json: request_data from step 2
             #    - headers: headers from step 1
             #    - Use 'async with' context manager for response
+            if self._debug:
+                print(request_data)
             async with session.post(
                 url=self._endpoint, headers=headers_dict, json=request_data
             ) as response:
